@@ -42,21 +42,27 @@
 .rside {
   background-color: #bbada0;
   float: right;
-  width: 100px;
+  width: 120px;
   height: 100px; 
-  padding-top: 10px;
+  padding: 10px;
   box-sizing: border-box;
   border-radius: 5px; 
   opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .rside text {
   display: block;
   text-align: center;
-  font-size: 30px;
+  font-size: 14px;
   font-weight: bold;
+  line-height: 1.2;
 }
 .score {
   color: #fff;
+  font-size: 12px;
+  margin-top: 5px;
 }
 /* =========================== game ====================  */
 .game {
@@ -93,55 +99,61 @@
 .cell-con { 
   width: 19vw;
   height: 19vw; 
-  line-height: 19vw;
   position: absolute;
-  font-size: 35px;
   font-weight: bold;
   text-align: center;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.level-name {
+  font-size: 12px;
+  line-height: 1.2;
+  word-break: break-all;
 }  
-.cell-con-2 { background: #eee4da; }
-.cell-con-4 { background: #ede0c8; }
+/* 公务员职级样式 */
+.cell-con-1 { background: #eee4da; } /* 二级科员 */
+.cell-con-2 { background: #ede0c8; } /* 一级科员 */
+.cell-con-3 {
+  color: #f9f6f2;
+  background: #f2b179; /* 四级主任科员 */
+}
+.cell-con-4 {
+  color: #f9f6f2;
+  background: #f59563; /* 三级主任科员 */
+}
+.cell-con-5 {
+  color: #f9f6f2;
+  background: #f67c5f; /* 二级主任科员 */
+}
+.cell-con-6 {
+  color: #f9f6f2;
+  background: #f65e3b; /* 一级主任科员 */
+}
+.cell-con-7 {
+  color: #f9f6f2;
+  background: #edcf72; /* 四级调研员 */
+}
 .cell-con-8 {
   color: #f9f6f2;
-  background: #f2b179;
+  background: #edcc61; /* 三级调研员 */
 }
-.cell-con-16 {
+.cell-con-9 {
   color: #f9f6f2;
-  background: #f59563;
+  background: #edc850; /* 二级调研员 */
 }
-.cell-con-32 {
+.cell-con-10 {
   color: #f9f6f2;
-  background: #f67c5f;
+  background: #edc53f; /* 一级调研员 */
 }
-.cell-con-64 {
+.cell-con-11 {
   color: #f9f6f2;
-  background: #f65e3b;
+  background: #edc22e; /* 二级巡视员 */
 }
-.cell-con-128 {
+.cell-con-12 {
   color: #f9f6f2;
-  background: #edcf72;
-  font-size: 30px;
-}
-.cell-con-256 {
-  color: #f9f6f2;
-  font-size: 30px;
-  background: #edcc61;
-}
-.cell-con-512 {
-  color: #f9f6f2;
-  font-size: 30px;
-  background: #edc850;
-}
-.cell-con-1024 {
-  color: #f9f6f2;
-  font-size: 25px;
-  background: #edc53f;
-}
-.cell-con-2048 {
-  color: #f9f6f2;
-  font-size: 25px;
-  background: #edc22e;
+  background: #edc11d; /* 一级巡视员 */
 }  
 .game-over {
   position: absolute;

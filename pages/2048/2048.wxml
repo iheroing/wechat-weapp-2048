@@ -7,11 +7,12 @@
 
   <view class='head'>
     <view class='lside'>
-      <text class='title'>2048</text>
+      <text class='title'>公务员晋升</text>
       <text class='play' bindtap='gameStart'>{{start}}</text>
     </view>
     <view class='rside'>
-      <text>score <text class='score'>{{score}}</text></text>
+      <text>最高职级</text>
+      <text class='score'>{{scoreName}}</text>
     </view>
   </view>
 
@@ -20,8 +21,8 @@
     <view bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
       <view class='row' wx:for="{{num}}" wx:for-item="row" wx:key="row.key" >
         <view class='cell' wx:for="{{row}}" wx:for-item="cell" wx:key="cell.key">
-          <view class='cell-con cell-con-{{cell}}'>
-            {{cell}}
+          <view class='cell-con cell-con-{{cell.level || cell}}' wx:if="{{cell}}">
+            <view class='level-name'>{{cell.name || cell}}</view>
           </view>
         </view>
       </view> 
@@ -29,8 +30,8 @@
 
     <!-- game over -->
     <view class='game-over' hidden='{{!over}}'>
-      <text class='nowScore'>历史最高分：{{bestScore}}</text>
-      <text class='nowScore'>本次成绩：{{score}}</text>
+      <text class='nowScore'>历史最高职级：{{bestScoreName}}</text>
+      <text class='nowScore'>本次最高职级：{{scoreName}}</text>
       <text class='pro'>{{endMsg}}</text> 
     </view> 
   </view>

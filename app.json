@@ -7,7 +7,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#faf8ee",
-    "navigationBarTitleText": "2048小游戏",
+    "navigationBarTitleText": "公务员晋升小游戏",
     "navigationBarTextStyle":"black"
   }
 }
